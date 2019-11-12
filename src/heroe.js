@@ -1,0 +1,36 @@
+import React, { Component } from 'react';
+import { Card , ListGroup,ListGroupItem} from 'react-bootstrap';
+
+class Heroe extends Component {
+
+    state = {
+        name: this.props.value.name,
+        descripcion: this.props.value.descripcion,
+        image: this.props.value.thumbnail.path,
+        comics:this.props.value.comics.items
+    }
+
+
+    render() {
+        return (
+            <div>
+                <Card style={{ width: '18rem' }}>
+                    
+                    <Card.Body>
+                        <Card.Title>Nombre:<h2>{this.state.name}</h2></Card.Title>
+                        <Card.Text>
+                           <p> {this.state.descripcion}</p>
+                        </Card.Text>
+                    </Card.Body>
+                    <ListGroup>
+                        {this.state.comics.map((e,i) => ( 
+                            <ListGroupItem value={e} key={i}></ListGroupItem>
+                        ))}
+                    </ListGroup>
+                </Card>
+            </div>
+        );
+    }
+}
+
+export default Heroe;
