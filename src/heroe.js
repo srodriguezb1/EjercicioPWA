@@ -5,7 +5,7 @@ class Heroe extends Component {
 
     state = {
         name: this.props.value.name,
-        descripcion: this.props.value.descripcion,
+        descripcion: this.props.value.description,
         image: this.props.value.thumbnail.path,
         comics:this.props.value.comics.items
     }
@@ -22,11 +22,11 @@ class Heroe extends Component {
                            <p> {this.state.descripcion}</p>
                         </Card.Text>
                     </Card.Body>
-                    <ListGroup>
+                    {/*<ListGroup>
                         {this.state.comics.map((e,i) => ( 
                             <ListGroupItem value={e} key={i}></ListGroupItem>
                         ))}
-                    </ListGroup>
+                        </ListGroup>*/}
                 </Card>
             </div>
         );
