@@ -19,14 +19,17 @@ class Heroe extends Component {
                     <Card.Body>
                         <Card.Title>Nombre:<h2>{this.state.name}</h2></Card.Title>
                         <Card.Text>
-                           <p> {this.state.descripcion}</p>
+                           {this.state.descripcion}
                         </Card.Text>
                     </Card.Body>
-                    {/*<ListGroup>
-                        {this.state.comics.map((e,i) => ( 
-                            <ListGroupItem value={e} key={i}></ListGroupItem>
+                    <Card.Body>
+                        Comics:
+                    </Card.Body>
+                    <ListGroup>
+                        {this.state.comics.map((e) => ( 
+                            <ListGroupItem >{e.name}</ListGroupItem>
                         ))}
-                        </ListGroup>*/}
+                        </ListGroup>
                 </Card>
             </div>
         );

@@ -3,12 +3,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: brown;
-	color: #fff;
 	text-align: center;
 	display: grid;
 	align-items: center;
 	font-family: 'Montserrat';
-	font-size: 3em;
 	padding: 2em;
 }
 
